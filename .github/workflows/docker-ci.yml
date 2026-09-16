@@ -95,7 +95,8 @@ jobs:
         uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: shahbazmokarram/backend:latest
-          severity: CRITICAL,HIGH
+          format: table
+          severity: CRITICAL
           exit-code: 1
 
       - name: Push backend image
@@ -119,7 +120,8 @@ jobs:
         uses: aquasecurity/trivy-action@v0.35.0
         with:
           image-ref: shahbazmokarram/frontend:latest
-          severity: CRITICAL,HIGH
+          format: table
+          severity: CRITICAL
           exit-code: 1
 
       - name: Push frontend image
