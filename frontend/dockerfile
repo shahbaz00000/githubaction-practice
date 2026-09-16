@@ -7,10 +7,11 @@ WORKDIR /app
 # install dependencies
 COPY package.json ./    
 RUN npm install
-RUN npm run build
 
 # copy project files
 COPY . .
+
+RUN npm run build
 
 # expose port
 EXPOSE 5173
