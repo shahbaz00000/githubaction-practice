@@ -28,7 +28,7 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: backend:latest
+          tags: shahbazmokarram/backend:latest
 
       - name: Build frontend image
         uses: docker/build-push-action@v5
@@ -36,7 +36,7 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
-          tags: frontend:latest
+          tags: shahbazmokarram/frontend:latest
 
 
 
